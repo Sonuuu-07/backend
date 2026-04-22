@@ -1,15 +1,26 @@
-## API Launchpad Backend
+# 🚀 API Launchpad Backend
 
-Your mission is to take this API from localhost to the cloud.
+This is a simple backend API built using Express.js.
 
-## Tasks
+## 📌 Features
+- Get all users → /api/users
+- Get user by ID → /api/users/:id
+- API status check → /api/status
 
-1. Complete missing routes
-2. Add one new API endpoint
-3. Test locally
-4. Deploy on Render
-5. Add screenshots
-6. Add deployment URL below
+## 🛠️ Tech Stack
+- Node.js
+- Express.js
 
-## Deployment URL
-(Add your Render link here)
+## ▶️ Run Locally
+
+npm install  
+npm start  
+
+Server runs on:  
+http://localhost:9000
+
+## 🌐 Deployment URL
+(To be added after deployment)
+
+## 📸 Screenshots
+(Add screenshots in /screenshots folder)
