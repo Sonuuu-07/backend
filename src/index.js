@@ -6,6 +6,9 @@ const app = express();
 // middleware
 app.use(express.json());
 
+// 🔥 ADD THIS LINE
+const userRoutes = require("./routes/userRoutes");
+
 // routes
 app.get("/", (req, res) => {
   res.send("API Launchpad is running");
@@ -17,6 +20,9 @@ app.get("/api/status", (req, res) => {
     message: "API is live and working"
   });
 });
+
+// 🔥 ADD THIS LINE
+app.use("/api/users", userRoutes);
 
 // PORT fix
 const PORT = process.env.PORT || 5000;
