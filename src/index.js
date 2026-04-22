@@ -1,33 +1,26 @@
-require("dotenv").config();
 const express = require("express");
+require("dotenv").config();
 
 const app = express();
 
-// Middleware
+// middleware
 app.use(express.json());
 
-// Routes import
-const userRoutes = require("./routes/userRoutes");
-
-// Routes use
-app.use("/api/users", userRoutes);
-
-// Home route
+// routes
 app.get("/", (req, res) => {
-  res.send("🚀 API Launchpad is running...");
+  res.send("API Launchpad is running");
 });
 
-// Status route (IMPORTANT)
 app.get("/api/status", (req, res) => {
-  res.status(200).json({
+  res.json({
     status: "success",
     message: "API is live and working"
   });
 });
 
-// Server start
+// PORT fix
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
